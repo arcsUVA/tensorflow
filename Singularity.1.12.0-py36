@@ -88,7 +88,8 @@ From: nvidia/cuda:9.0-devel-ubuntu16.04
 #        qtpy=1.5.2 
     pip install --upgrade \
         pip \
-        setuptools
+        setuptools \
+        future
 
     # install tensorflow with gpu support
     pip install tensorflow-gpu==1.12
@@ -96,7 +97,7 @@ From: nvidia/cuda:9.0-devel-ubuntu16.04
     # install tflearn
     pip install tflearn
 
-    # install pytorch
+    # install pytorch (includes Caffe2)
     conda install pytorch=1.0 cuda${CUDA_MAJVERSION}${CUDA_MINVERSION} torchvision -c pytorch
 
     # install xgboost
@@ -142,6 +143,7 @@ exec python $@
 This container is backed by Anaconda version 5.2.0 and provides the Python 3.6 bindings for:
     * Tensorflow 1.12.0 with Keras implementation
     * PyTorch 1.0
+    * Caffe2
     * XGBoost
     * LightGBM
     * OpenCV
