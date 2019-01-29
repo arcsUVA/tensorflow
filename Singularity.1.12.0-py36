@@ -89,7 +89,8 @@ From: nvidia/cuda:9.0-devel-ubuntu16.04
     pip install --upgrade \
         pip \
         setuptools \
-        future
+        future \
+        pydot
 
     # install tensorflow with gpu support
     pip install tensorflow-gpu==1.12
